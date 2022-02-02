@@ -301,7 +301,7 @@ class MultiRoomDevice(MediaPlayerEntity):
           self._mode = ''
         "Get Volume"
         volume = await self.api.get_volume()
-        if volume[0]:
+        if volume:
           self._volume = int(volume[0]) / self._max_volume
         "Get Mute State"
         muted = await self.api.get_muted()
